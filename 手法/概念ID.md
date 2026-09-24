@@ -154,10 +154,10 @@
   {
     "id": "LA-DET-06",
     "name": "行列式と正則性の同値性",
-    "definition": "正方行列Aが正則であることと det(A)≠0 であることが同値であるという理解",
+    "definition": "正方行列Aが正則であること、det(A)≠0であること、Ax=0が自明解のみを持つことが同値であるという理解（対偶として、Ax=0が非自明解を持つ ⇔ det(A)=0 ⇔ Aが正則でない）",
     "prerequisites": ["LA-DET-05", "LA-MAT-07"],
-    "evidence_patterns": ["det(A-λI)=0 のような式をそのまま適用して計算を進め、なぜdet=0という条件を使うのかを説明できない"],
-    "misconceptions": ["det=0という条件を暗記のみで運用し、非正則性との関係を理解していない"]
+    "evidence_patterns": ["det(A-λI)=0 のような式をそのまま適用して計算を進め、なぜdet=0という条件を使うのかを説明できない", "公式のみ適用し、非自明解の存在とdet=0の関係について理由づけがない"],
+    "misconceptions": ["det=0という条件を暗記のみで運用し、正則性・非自明解の存在との関係を理解していない"]
   },
   {
     "id": "LA-DET-07",
@@ -304,18 +304,10 @@
     "misconceptions": ["固有値を単なる計算結果としてしか捉えていない"]
   },
   {
-    "id": "LA-EIG-02",
-    "name": "非自明解の存在条件",
-    "definition": "(A-λI)v=0 が非自明解を持つ条件がdet=0であることの理解",
-    "prerequisites": ["LA-DET-06"],
-    "evidence_patterns": ["公式のみ適用し理由づけがない"],
-    "misconceptions": ["det=0を暗記のみで運用"]
-  },
-  {
     "id": "LA-EIG-03",
     "name": "特性方程式",
     "definition": "det(A-λI)=0を展開して得られる特性方程式（固有方程式）とその根が固有値であることの理解",
-    "prerequisites": ["LA-EIG-02", "LA-DET-02"],
+    "prerequisites": ["LA-DET-06", "LA-DET-02"],
     "evidence_patterns": ["特性方程式det(A-λI)=0の展開計算でλの次数や符号を誤る"],
     "misconceptions": ["特性方程式の根がそのまま固有ベクトルの成分だと誤解している"]
   },
